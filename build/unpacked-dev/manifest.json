@@ -1,0 +1,29 @@
+{
+    "manifest_version": 2,
+    "icons": {
+        "128": "images/icon.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/*",
+                "https://*/*"
+            ],
+            "js": [
+                "js/content.js"
+            ]
+        }
+    ],
+    "permissions": [
+        "<all_urls>"
+    ],
+    "web_accessible_resources": [
+        "js/*",
+        "html/*",
+        "css/*"
+    ],
+    "content_security_policy": "script-src 'self'; object-src 'self'",
+    "name": "replace-google-fonts",
+    "version": "0.0.1",
+    "description": "Use Qihoo 360 Open Fonts Service to replace Google's."
+}
